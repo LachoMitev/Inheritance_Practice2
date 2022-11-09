@@ -22,12 +22,16 @@ class Dog : public Animal
 public:
 	Dog();
 	Dog(string name, int age, int num_limbs);
+
+	void Speak();
 };
 
 
 int main() {
 
 	Dog dog("Spot", 2,4);
+
+	dog.Speak();
 
 	system("pause");
 }
@@ -67,4 +71,9 @@ Dog::Dog()
 Dog::Dog(string name, int age, int num_limbs) 
 {
 	Animal(name, age, num_limbs);
+}
+
+void Dog::Speak()
+{
+	cout << "Woof!\n";
 }
